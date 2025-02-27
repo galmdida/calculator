@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" /> <!--This helps in creating the button-->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="shared.css">
+    <script type="text/javascript" src="script.js" defer></script>
+    <script type="text/javascript" src="app.js" defer></script>
+    <script type="text/javascript" src="app2.js" defer></script>
+    <script type="text/javascript" src="display.js" defer></script>
+    <title>Calculators</title>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <img src="images/logo-img.PNG" alt="">
+                    <h2> <span>CALCULATORS</span></h2>
+                </div>
+                <ul id="nav-ul">
+                    <div class="btn">
+                        <i class="fas fa-times close-btn"></i>
+                    </div>
+                    <li>
+                        <a href="index.html" id="first-anchor">Home</a>
+                    </li>
+                    <li>
+                        <a href="about.html">About</a>
+                    </li>
+                    <li>
+                        <a href="date-calc.html">Date Calculator</a>
+                    </li>
+                    <li>
+                        <a href="interest-calc.html">Interest Calculator</a>
+                    </li>
+                    <li>
+                        <a href="statistics-calc.html">Statistical Calculator</a>
+                    </li>
+                </ul>
+                <div class="btn">
+                    <i class="fas fa-bars menu-btn"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <div id="jumbo">
+    </div>
+
+    <div id="date-calc">
+        <section id="retirement">
+            <div class="intro-calc">
+                <h2>
+                    Retirement Date and Remaining Months Calculator
+                </h2>
+                <p>
+                    This calculator designed for calculating retirement date. Be sure to use the date of birth on the ID
+                    and
+                    the
+                    retirement age for specific scheme you are checking.
+                </p>
+
+                <p>
+                    The calculator shows the remaining number of months in employment for loan repayment or pension
+                    contribution.
+                </p>
+
+                <p>
+                    Further, you may deduct the number of months you consider to leave out for the adjustment of pension
+                    contribution or loan repayment.
+                </p>
+            </div>
+
+            <div id="openRetirementCal" class="openCalc">
+                <p>
+                    Open Calculator
+                </p>
+            </div>
+
+            <form action="" id="retirement-calc">
+                <h2>
+                    Calculator
+                </h2>
+                <div class="fupisha-one">
+                    <div class="ret-calc">
+                        <label for="">Date of birth</label>
+                        <input id="inputDob" type="date" required>
+                    </div>
+                </div>
+
+                <div class="ret-calc">
+                    <button id="calcAge">Age Today</button>
+
+                    <input id="ageInYrs" type="text" name="" id="" class="age" placeholder="Comp yrs">
+                    <input id="ageInMonths" type="text" name="" id="" class="age" placeholder="Comp mths">
+                    <input id="ageIndays" type="text" name="" id="" class="age" placeholder="Comp dys">
+                </div>
+                <div class="fupisha-one">
+                    <div class="ret-calc">
+                        <label for="">Age of Retirement</label>
+                        <input id="aor" type="number" class="ret" placeholder="60" required>
+                    </div>
+                </div>
+
+                <p style="color:rgb(192, 153, 153);text-align:center;font-size:1rem; font-weight:400; background-color: rgb(59, 35, 3); padding: 0.5rem; border-radius: 4px; display: none;"
+                    id="errorMessage"></p>
+
+                <div class="fupisha-one">
+                    <div class="ret-calc">
+                        <button id="calcDateOfRetirement">Retirement Date</button>
+                        <input id="dorPopulate" type="text" class="ret">
+                    </div>
+                </div>
+
+                <p style="color:rgb(192, 153, 153);text-align:center;font-size:1rem; font-weight:400; background-color: rgb(59, 35, 3); padding: 0.5rem; border-radius: 4px; display: none;"
+                    id="errorMessage2"></p>
+
+                <div class="ret-calc">
+                    <button id="calcRemainingPeriod">Period Remaining in Emp</button>
+                    <input id="ttyrs" type="text" class="age" placeholder="total yrs">
+                    <input id="ttmonths" type="text" class="age" placeholder="total month">
+                </div>
+
+                <div class="ret-calc">
+                    <label for="">No. of Months to be Deducted</label>
+                    <input id="NoDeducted" type="number">
+                </div>
+
+                <p style="color:rgb(192, 153, 153);text-align:center;font-size:1rem; font-weight:400; background-color: rgb(59, 35, 3); padding: 0.5rem; border-radius: 4px; display: none;"
+                    id="errorMessage3"></p>
+
+                <div class="ret-calc">
+                    <button id="NoOfMonthsForCalc">No. of Months for Calculation</button>
+                    <input id="NoOfMonthsInput" type="number">
+                </div>
+
+            </form>
+
+        </section>
+
+        <section id="contract-end-date">
+
+            <div class="intro-calc">
+                <h2>
+                    Contract End Date and Remaining Months Calculator
+                </h2>
+                <p>
+                    This calculator was designed for calculating contract end date for an employee who is under
+                    contract. Be
+                    sure to use contract letter to identify contract start date and end date.
+                </p>
+
+                <p>
+                    The calculator returns the remaining number of months under employment for pension contribution or
+                    loan
+                    repayment.
+                </p>
+
+                <p>
+                    Further, you may deduct the number of months you consider to leave out for the adjustment of pension
+                    contribution or loan repayment.
+                </p>
+
+            </div>
+
+            <div id="openContractEndDateCalc" class="openCalc">
+                <p>
+                    Open Calculator
+                </p>
+            </div>
+
+            <form action="" id="contractEndDate-calc">
+                <h2>
+                    Calculator
+                </h2>
+                <div class="fupisha-one">
+                    <div class="ret-calc">
+                        <label for="">Contract Start Date</label>
+                        <input id="inputDateob" type="date" required>
+                    </div>
+                </div>
+
+                <div class="ret-calc">
+                    <button id="calcPerInCont">Period in Contract</button>
+
+                    <input id="periodInYrs" type="text" name="" id="" class="age" placeholder="Comp yrs">
+                    <input id="periodInMonths" type="text" name="" id="" class="age" placeholder="Comp mths">
+                    <input id="periodIndays" type="text" name="" id="" class="age" placeholder="Comp dys">
+                </div>
+
+                <div class="fupisha-one">
+                    <div class="ret-calc">
+                        <label for="">Length of Contract</label>
+                        <input id="periodOfContract" type="number" class="ret" placeholder="3">
+                    </div>
+                </div>
+
+                <p style="color:rgb(192, 153, 153);text-align:center;font-size:1rem; font-weight:400; background-color: rgb(59, 35, 3); padding: 0.5rem; border-radius: 4px; display: none;"
+                    id="errorMessageContract"></p>
+
+                <div class="fupisha-one">
+                    <div class="ret-calc">
+                        <button id="calcCed">Contract End Date</button>
+                        <input id="cedPopulate" type="text" class="ret">
+                    </div>
+                </div>
+
+                <p style="color:rgb(192, 153, 153);text-align:center;font-size:1rem; font-weight:400; background-color: rgb(59, 35, 3); padding: 0.5rem; border-radius: 4px; display: none;"
+                    id="errorMessageContract2">
+                </p>
+
+                <p style="color:rgb(192, 153, 153);text-align:center;font-size:1rem; font-weight:400; background-color: rgb(59, 35, 3); padding: 0.5rem; border-radius: 4px; display: none;"
+                    id="errorMessageContract3">
+                </p>
+
+
+                <div class="ret-calc">
+                    <button id="calcContractRemainingPeriod">Period Remaining in Emp</button>
+                    <input id="totaltyrs" type="text" class="age" placeholder="total yrs">
+                    <input id="totalmonths" type="text" class="age" placeholder="total month">
+                </div>
+
+                <div class="ret-calc">
+                    <label for="">No. of Months to be Deducted</label>
+                    <input id="NumberOfMonthsDeducted" type="number">
+                </div>
+
+                <p style="color:rgb(192, 153, 153);text-align:center;font-size:1rem; font-weight:400; background-color: rgb(59, 35, 3); padding: 0.5rem; border-radius: 4px; display: none;"
+                    id="errorMessageContract4">
+                </p>
+
+                <p style="color:rgb(192, 153, 153);text-align:center;font-size:1rem; font-weight:400; background-color: rgb(59, 35, 3); padding: 0.5rem; border-radius: 4px; display: none;"
+                    id="errorMessageContract5">
+                </p>
+
+                <div class="ret-calc">
+                    <button id="numberOfMonthsForCalc">No. of Months for Calculation</button>
+                    <input id="deductOfMonthsInput" type="number">
+                </div>
+
+            </form>
+
+        </section>
+    </div>
+    
+</body>
+
+<footer>
+    <p>
+        Contact: 254741370493
+    </p>
+    <p>
+        Galm Dida &#169; 2025
+    </p>
+</footer>
+
+</html>

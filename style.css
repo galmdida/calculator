@@ -1,0 +1,158 @@
+/* Body */
+body {
+    font-family: "Yantramanav", sans-serif;
+    background: #e1e1e1;
+    color: rgb(58, 58, 58);
+}
+
+.intro-calc {
+    height: 22rem;
+}
+
+body p {
+    line-height: 1.5;
+    /* inclease the spaces between lines  */
+}
+
+/* For this section, make it away from the margin by setting the width to 85% */
+/* Center the content by setting margins, left-right auto */
+/* You may then align text center */
+#date-calc {
+    width: 95%;
+    margin: 0 auto;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    border-style: solid;
+    border-color: rgb(206, 202, 202);
+    border-width: 0.1px;
+}
+
+#retirement {
+    border-style: solid;
+    border-color: rgb(206, 202, 202);
+    border-width: 0.1px;
+    padding: 2rem;
+}
+
+#contract-end-date {
+    padding: 2rem;
+}
+
+/* Manage margins between divs in the with top */
+#retirement-calc div {
+    margin-top: 1rem;
+}
+
+/* Manage the space between label and input field  */
+/* First step is to make label and input block */
+/* Make the overall div with class .ret-cal display flex */
+/* Create a space between the flex items by justify content */
+.ret-calc label {
+    display: block;
+}
+
+.ret-calc input {
+    display: block;
+}
+
+.ret-calc {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Set width for the form content */
+/* Center content */
+/* Add box shadow */
+#retirement-calc {
+    background-color: rgba(53, 187, 48, 0.87);
+    border-radius: 7px;
+    padding: 1rem;
+    width: 97%;
+    margin: 0 auto;
+
+    box-shadow: 3px 3px 5px rgb(7, 4, 26);
+}
+
+
+/* For the date of birth and retirement age the space between label and input is wide */
+/* So, we will add a container around it and assign a class fupisha-one */
+/* Center the content with margin */
+.fupisha-one {
+    width: 70%;
+    margin: 0 auto;
+}
+
+/* Fupisha input box for age */
+.age {
+    width: 21%;
+}
+
+/* Fupisha input box for retirement age */
+.ret {
+    width: 43%;
+}
+
+/* Format button in the form */
+#retirement-calc button {
+    font-family: inherit;
+}
+
+#contractEndDate-calc {
+    background-color: rgba(53, 187, 48, 0.87);
+    border-radius: 7px;
+    padding: 1rem;
+    width: 97%;
+    margin: 0 auto;
+
+    box-shadow: 3px 3px 5px rgb(7, 4, 26);
+}
+
+#contractEndDate-calc div {
+    margin-top: 1rem;
+}
+
+#contractEndDate-calc button {
+    font-family: inherit;
+}
+
+.openCalc {
+    padding: 1rem;
+    background-color: rgb(31, 126, 94);
+    border-radius: 6px;
+    box-shadow: 3px 3px 5px rgb(7, 4, 26);
+    margin-bottom: 0.5rem;
+}
+
+.openCalc:hover {
+    cursor: pointer;
+    background-color: rgb(32, 187, 135);
+}
+
+/* Amend display of calculators */
+#retirement-calc {
+    display: none;
+}
+
+#contractEndDate-calc {
+    display: none;
+}
+
+/* Make page responsive */
+
+@media(max-width: 768px) {
+    #date-calc {
+        display: block;
+    }
+
+    .intro-calc {
+        height: 100%;
+    }
+
+    .fupisha-one {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+}

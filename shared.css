@@ -1,0 +1,104 @@
+body {
+    padding: 0px;
+    margin: 0px;
+}
+
+header {
+    background: gray;
+    padding: 0.5rem;
+}
+
+.logo img {
+    height: 4rem;
+    width: 4rem;
+    border-radius: 100px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo h2 {
+    margin-left: 0.6rem;
+    text-transform: uppercase;
+    color: aliceblue;
+    font-size: 1.3rem;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-right: 0.6rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    padding: 0.3rem 0.2rem;
+    color: white;
+    border-radius: 3px;
+    transition: all 0.5s ease-in-out;
+}
+
+nav ul li a:hover {
+    background: rgb(66, 65, 65);
+}
+
+header .btn {
+    font-size: 1.3rem;
+    color: white;
+    cursor: pointer;
+    display: none;
+}
+
+/* Making responsive */
+@media(max-width: 768px) {
+    header .btn {
+        display: block;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        width: 18.75rem;
+        height: 100vh;
+        background: gray;
+        top: 3.96rem;
+        left: 100%;
+        /* We are hidding it */
+        padding: 5rem 0rem;
+        transition: all 0.8s ease-in;
+    }
+
+    nav ul.display {
+        left: 0px;
+        transition: all 0.8s ease-in-out;
+    }
+
+    nav ul li a {
+        display: block;
+        margin: 10px;
+    }
+
+    .close-btn {
+        position: absolute;
+        top: 0rem;
+        left: 15rem;
+        margin: 1.5rem;
+    }
+}
+
+footer{
+    width: 95%;
+    text-align: center;
+}
