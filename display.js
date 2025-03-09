@@ -21,5 +21,15 @@ function openContcalc(){
 const openContractEndDateDiv = document.getElementById("openContractEndDateCalc");
 openContractEndDateDiv.addEventListener("click", openContcalc);
 
+// Open contract end date calculator
+function openMatcalc(){
+    const MaturityDateCalcForm = document.getElementById("maturityDateCalc");
+    MaturityDateCalcForm.style.display = "block"
+
+    openMaturityDateCalc.style.display = "none"
+}
+
+const openMaturityDateCalc = document.getElementById("openMaturityDateCalc");
+openMaturityDateCalc.addEventListener("click", openMatcalc);
 
 

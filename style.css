@@ -29,14 +29,10 @@ body p {
     border-width: 0.1px;
 }
 
-#retirement {
+.border-padding {
     border-style: solid;
     border-color: rgb(206, 202, 202);
     border-width: 0.1px;
-    padding: 2rem;
-}
-
-#contract-end-date {
     padding: 2rem;
 }
 
@@ -139,6 +135,38 @@ body p {
     display: none;
 }
 
+/* Manage margins between divs in the with top */
+#maturityDate div {
+    margin-top: 1rem;
+}
+
+#maturityDateCalc{
+    background-color: rgba(53, 187, 48, 0.87);
+    border-radius: 7px;
+    padding: 1rem;
+    width: 97%;
+    margin: 0 auto;
+
+    box-shadow: 3px 3px 5px rgb(7, 4, 26);
+}
+
+#maturityDateCalc button {
+    font-family: inherit;
+}
+
+.fupisha-two{
+    width: 70%;
+    margin: 0 auto;
+}
+
+#periodtoChange{
+    width: 39%;
+}
+
+#maturityDateCalc {
+    display: none;
+}
+
 /* Make page responsive */
 
 @media(max-width: 768px) {
@@ -153,6 +181,13 @@ body p {
     .fupisha-one {
         width: 100%;
         margin: 0 auto;
+    }
+    .fupisha-two{
+        width: 100%;
+    }
+
+    .border-padding {
+        padding: 1rem;
     }
 
 }
